@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Dot Image On Canvas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    
+    <script type="module" crossorigin src="/assets/index.9cb99f91.js"></script>
+    <link rel="stylesheet" href="/assets/index.e22f0608.css">
+  </head>
+  <body>
+    <div class="controller">
+      <div>
+        <button id="autoBtn">자동으로 확인</button>
+        <button id="originalBtn">원본 확인</button>
+      </div>
+      <div>
+        <input
+          type="range"
+          id="speed"
+          name="speed"
+          min="1"
+          max="300"
+          value="1"
+        />
+        <label for="speed">자동확인 속도</label>
+      </div>
+    </div>
+    <div class="mainWrapper">
+      <div>
+        <h1 class="typedTitle"></h1>
+      </div>
+      <div class="filebox">
+        <label for="imageInput">이미지 업로드</label>
+        <input type="file" accept="image/*" id="imageInput" />
+      </div>
+    </div>
+  </body>
+</html>
