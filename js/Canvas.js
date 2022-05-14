@@ -91,6 +91,7 @@ class Canvas {
 
   resetCanvas() {
     this.CircleArr = [];
+    cancelAnimationFrame(this.ani_ID);
     this.drawCircle(...this.imgWidthHeight);
   }
 
