@@ -97,6 +97,7 @@ h1 {
   font-size: 4vmax;
   margin-bottom: 3vmax;
   display: inline-block;
+  margin-top: 0px;
 }
 span {
   font-size: 4vmax;
@@ -116,6 +117,7 @@ canvas,
   100% {
     opacity: 0;
     z-index: 1;
+    top: -99999px;
   }
 }
 @keyframes fadeIn {
@@ -132,7 +134,7 @@ canvas,
 
 @media (max-width: 400px) {
   button {
-    padding: 2.72vw 7.3vw;
+    padding: 2.72vmin 7.3vmin;
   }
   .filebox label {
     padding: 2.72vw 8.3vw;
