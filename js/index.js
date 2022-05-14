@@ -1,4 +1,5 @@
-import Canvas from './Canvas.js';
+import Canvas from './Canvas';
+import Typed from 'typed.js';
 
 const fileTypeCheck = fileName => {
   const pathpoint = fileName.lastIndexOf('.');
@@ -15,7 +16,6 @@ const fileTypeCheck = fileName => {
 };
 
 const onChange = e => {
-  console.log(e);
   const file = e.target.files[0];
   if (fileTypeCheck(file.name)) {
     const mainWrapper = document.querySelector('.mainWrapper');
@@ -33,6 +33,11 @@ const onChange = e => {
 };
 
 const ImageInput = document.getElementById('imageInput');
-
 ImageInput.addEventListener('change', onChange);
-console.log(ImageInput);
+
+var options = {
+  strings: ['Dot Image On Canvas'],
+  typeSpeed: 55,
+};
+
+var typed = new Typed('.typedTitle', options);

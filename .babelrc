@@ -1,0 +1,23 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "browsers": ["ie >= 8"]
+        },
+        "modules": "auto",
+        "useBuiltIns": "usage"
+      }
+    ]
+  ], //전반적인 es6 기능을 가지고 있는 프리셋
+  "plugins": [
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "corejs": 3
+      }
+    ],
+    ["@babel/plugin-proposal-class-properties"]
+  ]
+}

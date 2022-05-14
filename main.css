@@ -94,6 +94,10 @@ button:hover {
 h1 {
   font-size: 4vmax;
   margin-bottom: 3vmax;
+  display: inline-block;
+}
+span {
+  font-size: 4vmax;
 }
 .mainWrapper.hide {
   animation: fadeOut 0.5s forwards;

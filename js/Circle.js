@@ -33,7 +33,7 @@ class Circle {
     this.parentCenterX = parentCenterX;
     this.parentCenterY = parentCenterY;
     this.pi = Math.PI * 2;
-    this.distanceUnit = 0.5;
+    this.distanceUnit = 1;
 
     this.isDivided = false;
     this.rgbData = null;
@@ -95,6 +95,7 @@ class Circle {
   clear() {
     if (this.afterChangeRectSize < this.rectSize)
       this.afterChangeRectSize += this.rectChangePoint;
+    else this.isClear = true;
 
     if (!this.rectImgData)
       this.rectImgData = this.copyCtx.getImageData(

@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Canvas Dot Drawing</title>
+    <title>Dot Image On Canvas</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="index.js" type="module"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="./main.css" />
+    <script src="./js/index.js" type="module"></script>
   </head>
   <body>
     <div class="controller">
@@ -20,14 +20,16 @@
           id="speed"
           name="speed"
           min="1"
-          max="200"
+          max="300"
           value="1"
         />
         <label for="speed">자동확인 속도</label>
       </div>
     </div>
     <div class="mainWrapper">
-      <h1>Canvas Dot Drawing</h1>
+      <div>
+        <h1 class="typedTitle"></h1>
+      </div>
       <div class="filebox">
         <label for="imageInput">이미지 업로드</label>
         <input type="file" accept="image/*" id="imageInput" />
