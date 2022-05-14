@@ -9,6 +9,8 @@ class Circle {
     copyCtx,
     circlePos,
   ) {
+    this.divideSpeedInput = document.getElementById('divideSpeed');
+
     this.radius = unit / 2;
     this.leftX = centerX - this.radius;
     this.leftY = centerY - this.radius;
@@ -33,13 +35,13 @@ class Circle {
     this.parentCenterX = parentCenterX;
     this.parentCenterY = parentCenterY;
     this.pi = Math.PI * 2;
-    this.distanceUnit = 1;
-
+    this.distanceUnit = this.divideSpeedInput.value / 10;
     this.isDivided = false;
     this.rgbData = null;
   }
 
   draw() {
+    this.distanceUnit = this.divideSpeedInput.value / 10;
     if (!this.rgbData) {
       const imgData = this.copyCtx.getImageData(
         this.leftX,
@@ -56,7 +58,7 @@ class Circle {
 
     const distanceX = Math.abs(this.parentCenterX - this.centerX);
 
-    if (distanceX < 1) {
+    if (distanceX < this.distanceUnit) {
       this.parentCenterX = this.centerX;
       this.parentCenterY = this.centerY;
     } else

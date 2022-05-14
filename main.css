@@ -11,6 +11,7 @@
   transition: all 0.5s;
 }
 body {
+  opacity: 0;
   overflow: hidden;
   display: flex;
   height: 100vh;
@@ -50,7 +51,8 @@ button {
 #autoBtn {
   background-color: rgb(82, 82, 242);
 }
-#originalBtn {
+#originalBtn,
+#resetBtn {
   border: 1px solid white;
 }
 button:hover {
@@ -128,11 +130,14 @@ canvas,
   }
 }
 
-@media (max-width: 354px) {
+@media (max-width: 400px) {
   button {
-    padding: 2.72vw 9.3vw;
+    padding: 2.72vw 7.3vw;
   }
   .filebox label {
-    padding: 2.72vw 10.3vw;
+    padding: 2.72vw 8.3vw;
+  }
+  input {
+    width: 50vw;
   }
 }

@@ -7,7 +7,7 @@ class Canvas {
     this.copyCanvas = document.createElement('canvas');
     this.ctx = this.canvas.getContext('2d');
     this.copyCtx = this.copyCanvas.getContext('2d', { alpha: false });
-    this.speedInput = document.getElementById('speed');
+    this.speedInput = document.getElementById('autoSpeed');
     //컨트롤 부분 height
     const controller = document.querySelector('.controller');
     const controllerHeight = controller.offsetHeight;
@@ -62,7 +62,6 @@ class Canvas {
     this.copyCanvas.width = this.canvas.width;
     this.copyCanvas.height = this.canvas.height;
 
-    this.ctx.drawImage(img, 0, 0, this.canvas.width, this.canvas.height);
     this.copyCtx.drawImage(img, 0, 0, this.canvas.width, this.canvas.height);
 
     document.body.insertBefore(this.canvas, document.body.firstElementChild);
@@ -71,8 +70,6 @@ class Canvas {
 
     controller.classList.add('fadeIn');
 
-    this.defaultCircleCnt =
-      (this.imgWidthHeight[0] * this.imgWidthHeight[1]) / 4;
     this.drawCircle(...this.imgWidthHeight);
 
     document
@@ -82,11 +79,19 @@ class Canvas {
     document
       .getElementById('originalBtn')
       .addEventListener('click', () => this.clearCanvas());
+    document
+      .getElementById('resetBtn')
+      .addEventListener('click', () => this.resetCanvas());
 
     const ua = navigator.userAgent.toUpperCase();
     if (ua.includes('MOBILE'))
       this.canvas.addEventListener('touchmove', e => this.touchMoveEvent(e));
     else this.canvas.addEventListener('mousemove', e => this.moveEvent(e));
+  }
+
+  resetCanvas() {
+    this.CircleArr = [];
+    this.drawCircle(...this.imgWidthHeight);
   }
 
   moveEvent(e) {

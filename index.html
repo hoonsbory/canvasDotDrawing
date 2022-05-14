@@ -11,19 +11,31 @@
   <body>
     <div class="controller">
       <div>
-        <button id="autoBtn">자동으로 확인</button>
-        <button id="originalBtn">원본 확인</button>
+        <button id="autoBtn">자동</button>
+        <button id="originalBtn">원본</button>
+        <button id="resetBtn">초기화</button>
       </div>
       <div>
+        <div>
+          <input
+            type="range"
+            id="autoSpeed"
+            name="autoSpeed"
+            min="1"
+            max="300"
+            value="1"
+          />
+          <label for="autoSpeed">자동 속도</label>
+        </div>
         <input
           type="range"
-          id="speed"
-          name="speed"
+          id="divideSpeed"
+          name="divideSpeed"
           min="1"
-          max="300"
-          value="1"
+          max="20"
+          value="10"
         />
-        <label for="speed">자동확인 속도</label>
+        <label for="divideSpeed">애니메이션 속도</label>
       </div>
     </div>
     <div class="mainWrapper">

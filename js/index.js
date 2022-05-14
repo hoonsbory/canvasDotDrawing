@@ -1,5 +1,20 @@
 import Canvas from './Canvas';
 import Typed from 'typed.js';
+import FontFaceObserver from 'fontfaceobserver';
+
+const options = {
+  strings: ['Dot Image On Canvas'],
+  typeSpeed: 55,
+};
+
+const font = new FontFaceObserver('Pretendard Variable');
+font
+  .load(null, 3000)
+  .then(function () {
+    document.body.style.opacity = 1;
+    new Typed('.typedTitle', options);
+  })
+  .catch(err => (document.body.style.opacity = 1));
 
 const fileTypeCheck = fileName => {
   const pathpoint = fileName.lastIndexOf('.');
@@ -34,10 +49,3 @@ const onChange = e => {
 
 const ImageInput = document.getElementById('imageInput');
 ImageInput.addEventListener('change', onChange);
-
-var options = {
-  strings: ['Dot Image On Canvas'],
-  typeSpeed: 55,
-};
-
-var typed = new Typed('.typedTitle', options);
