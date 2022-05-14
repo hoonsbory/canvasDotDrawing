@@ -61,7 +61,7 @@ button:hover {
 }
 .filebox label {
   display: inline-block;
-  padding: 15px 30px;
+  padding: 1vmax 2vmax;
   color: rgb(255, 255, 255);
   font-size: inherit;
   line-height: normal;
@@ -135,9 +135,6 @@ canvas,
 @media (max-width: 400px) {
   button {
     padding: 2.72vmin 7.3vmin;
-  }
-  .filebox label {
-    padding: 2.72vw 8.3vw;
   }
   input {
     width: 50vw;
