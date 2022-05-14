@@ -84,13 +84,9 @@ class Canvas {
       .addEventListener('click', () => this.resetCanvas());
 
     const ua = navigator.userAgent.toUpperCase();
-    if (ua.includes('MOBILE')) {
-      this.minRadius = 3;
+    if (ua.includes('MOBILE'))
       this.canvas.addEventListener('touchmove', e => this.touchMoveEvent(e));
-    } else {
-      this.minRadius = 4;
-      this.canvas.addEventListener('mousemove', e => this.moveEvent(e));
-    }
+    else this.canvas.addEventListener('mousemove', e => this.moveEvent(e));
   }
 
   resetCanvas() {
@@ -129,7 +125,7 @@ class Canvas {
 
   divideCircle(circle) {
     const { leftX, leftY, rightX, rightY, unit, centerX, centerY } = circle;
-    if (rightX - leftX <= this.minRadius) return; //반지름 4보다 작으면 리턴
+    if (rightX - leftX <= 4) return; //반지름 4보다 작으면 리턴
     else {
       circle.isDivided = true;
       const radius = unit / 2;
