@@ -2,7 +2,7 @@
 
 <br>
 
-### 🏠 [HomePage](https://slamdunk-test.site](https://dotdrawing.netlify.app/)/)  
+### 🏠 [HomePage](https://dotdrawing.netlify.app/)  
 ![image](https://github.com/hoonsbory/canvasDotDrawing/assets/53922603/6693ca2c-8b8f-4d52-bcbc-d842b13b7d84)
 
 <br>
